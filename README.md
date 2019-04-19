@@ -9,21 +9,18 @@
 * 自动加载外键关联实体，支持延时加载；
 * 支持链式表达查询，更直观的查询语义，参考下面的介绍或sample中的例子。
 
-----
 ## 需要权限：
 
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
-----
 ## 混淆时注意事项：
 
  * 添加Android默认混淆配置${sdk.dir}/tools/proguard/proguard-android.txt
  * 不要混淆xUtils中的注解类型，添加混淆配置：-keep class * extends java.lang.annotation.Annotation { *; }
  * 对使用DbUtils模块持久化的实体类不要混淆，或者注解所有表和列名称@Table(name="xxx")，@Id(column="xxx")，@Column(column="xxx"),@Foreign(column="xxx",foreign="xxx")；
 
-----
 ## DbUtils使用方法：
 
 ```java
@@ -67,5 +64,3 @@ db.execNonQuery(sql) // 执行自定义sql
 ...
 
 ```
-
-----
