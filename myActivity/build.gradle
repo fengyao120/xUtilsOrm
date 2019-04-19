@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        applicationId "com.lidroid.xutils.sample"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {//忽略清单文件的Deeplink警告
+        disable 'GoogleAppIndexingWarning'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library')
+    implementation 'com.android.support:support-v4:25.1.0'
+
+    implementation 'com.jakewharton:butterknife:8.5.1'//控件注入工具
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'//控件注入工具
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+}
