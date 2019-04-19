@@ -21,14 +21,14 @@ public class MyActivity extends FragmentActivity {
     @BindView(R.id.tabhost) FragmentTabHost mTabHost;
 
     private Class fragmentArray[] = {
-            HttpFragment.class,
-            DbFragment.class};
+            DbFragment.class,
+            HttpFragment.class};
     private int iconArray[] = {
-            R.drawable.icon_http,
-            R.drawable.icon_database};
+            R.drawable.icon_database,
+            R.drawable.icon_http};
     private String titleArray[] = {
-            "Http",
-            "db"};
+            "db",
+            "Http"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
