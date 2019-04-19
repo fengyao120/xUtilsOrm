@@ -14,6 +14,8 @@
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
+## 使用方法：
+[xUtilsOrm.aar 下载](./aar/xUtilsOrm.aar)
 
 ## 混淆时注意事项：
 
